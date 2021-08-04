@@ -67,34 +67,34 @@ class FocusedYellowGreenPenguin(QCAlgorithm):
         if self.differenceAAL>0 and self.differenceDAL<0:
             self.Liquidate("DAL")
             self.Liquidate("AAL")
-            self.SetHoldings("AAL",.5)
-            self.SetHoldings("DAL",-.5)
+            self.SetHoldings("AAL",.6)
+            self.SetHoldings("DAL",-.4)
                 
         elif self.differenceAAL<0 and self.differenceDAL>0:
             self.Liquidate("AAL")
             self.Liquidate("DAL")
-            self.SetHoldings("DAL",.5)
-            self.SetHoldings("AAL",-.5)
+            self.SetHoldings("DAL",.4)
+            self.SetHoldings("AAL",-.6)
         
         elif self.differenceAAL<0 and self.differenceDAL<0:
             self.Liquidate("AAL")
             self.Liquidate("DAL")
             if self.differenceAAL>self.differenceDAL:
-                 self.SetHoldings("AAL",.5)
-                 self.SetHoldings("DAL",-.5)
+                 self.SetHoldings("AAL",.6)
+                 self.SetHoldings("DAL",-.4)
             else:
-                self.SetHoldings("DAL",.5)
-                self.SetHoldings("AAL",-.5)
+                self.SetHoldings("DAL",.4)
+                self.SetHoldings("AAL",-.6)
         
         elif self.differenceAAL>0 and self.differenceDAL>0:
             self.Liquidate("AAL")
             self.Liquidate("DAL")
             if self.differenceAAL>self.differenceDAL:
-                 self.SetHoldings("AAL",.5)
-                 self.SetHoldings("DAL",-.5)
+                 self.SetHoldings("AAL",.6)
+                 self.SetHoldings("DAL",-.4)
             else:
-                self.SetHoldings("DAL",.5)
-                self.SetHoldings("AAL",-.5)
+                self.SetHoldings("DAL",.4)
+                self.SetHoldings("AAL",-.6)
                 
         
             
